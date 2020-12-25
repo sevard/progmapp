@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Play</title>
+  </head>
+  <body>
+    <h1>Play main page</h1>
+    {% if guess > 20 %}
+      <p>You are correct, it is :{{ guess }}</p>
+    {% elif guess < 20 %}
+      <p>Your guess is not correct</p>
+    {% endif %}
+  </body>
+</html>
