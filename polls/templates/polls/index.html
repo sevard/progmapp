@@ -1,0 +1,29 @@
+{% extends "polls/base.html" %}
+{% block content %}
+
+	<h1>Polls Index Page</h1>
+	<h2>page is under development</h2>
+  {% if latest_question_list %}
+		<p>There are {{ latest_question_list|length }} questions saved.</p>
+    {% for question in latest_question_list %}
+  		<article class="media content-section">
+  		  <div class="media-body">
+  		    <div class="article-metadata">
+            <ul>
+              <li>hello</li>
+							<li><a href="{% url 'polls:polls-welcome' %}{{ question.id }} ">{{ question.question_text }}</a></li>
+            </ul>
+  		    </div>
+  		  </div>
+  		</article>
+    {% endfor %}
+  {% else %}
+    <article class="media content-section">
+      <div class="media-body">
+        <div class="article-metadata">
+          <p>No questions are available.</p>
+        </div>
+      </div>
+    </article>
+  {% endif %}
+{% endblock content %}
