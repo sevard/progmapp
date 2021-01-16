@@ -10,6 +10,7 @@ urlpatterns = [
     # ex: /polls/main
     path('main',TemplateView.as_view(template_name='polls/main.html'), name='polls-main'),
 
+    path('questions/', views.QuestionListView.as_view(), name='questions-list'),
     # ex: /polls/index
     path('index/', views.index, name='polls-index'),
     # ex: /polls/5/
