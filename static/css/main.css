@@ -15,6 +15,10 @@ ul {
   background-color: #5f788a;
 }
 
+.bg-image {
+  width: 1020px;
+}
+
 .site-header .navbar-nav .nav-link {
   color: #cbd5db;
 }
