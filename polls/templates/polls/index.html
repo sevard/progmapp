@@ -1,57 +1,57 @@
 {% extends "base.html" %}
 
 {% block navbar %}
-		<header class="site-header">
-			<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-					<div class="container">
-							<a class="navbar-brand mr-4" href="#">Django Polls</a>
-							<button aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
-											data-target="#navbarToggle" data-toggle="collapse" type="button">
-									<span class="navbar-toggler-icon"></span>
-							</button>
-							<div class="collapse navbar-collapse" id="navbarToggle">
-									<div class="navbar-nav mr-auto">
-											<a class="nav-item nav-link" href="{% url 'polls:polls-welcome' %}">Polls Welcome page</a>
-											<a class="nav-item nav-link" href="{% url 'polls:polls-index' %}">Polls Index page</a>
-											<a class="nav-item nav-link" href="{% url 'polls:questions-list' %}">All Questions page</a>
-									</div>
-									 <!-- Navbar Right Side -->
-									<div class="navbar-nav">
-											<a class="nav-item nav-link" href="#">Login</a>
-											<a class="nav-item nav-link" href="#">Register</a>
-									</div>
-							</div>
-					</div>
-			</nav>
-		</header>
+<header class="site-header">
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+		<div class="container">
+			<a class="navbar-brand mr-4" href="#">Django Polls</a>
+			<button aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation"
+				class="navbar-toggler" data-target="#navbarToggle" data-toggle="collapse" type="button">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarToggle">
+				<div class="navbar-nav mr-auto">
+					<a class="nav-item nav-link" href="{% url 'polls:polls-welcome' %}">Polls Welcome page</a>
+					<a class="nav-item nav-link" href="{% url 'polls:polls-index' %}">Polls Index page</a>
+					<a class="nav-item nav-link" href="{% url 'polls:questions-list' %}">All Questions page</a>
+				</div>
+				<!-- Navbar Right Side -->
+				<div class="navbar-nav">
+					<a class="nav-item nav-link" href="#">Login</a>
+					<a class="nav-item nav-link" href="#">Register</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>
 {% endblock navbar %}
 
 {% block content %}
-		<br>
-		<h1>Polls Index Page</h1>
+<br>
+<h1>Polls Index Page</h1>
 
-	  {% if latest_question_list %}
-			<p>There are {{ latest_question_list|length }} questions saved.</p>
-	    {% for question in latest_question_list %}
-	  		<article class="media content-section">
-	  		  <div class="media-body">
-	  		    <div class="article-metadata">
-	            <ul>
-								<li><a href="{% url 'polls:polls-detail' question.id %} ">{{ question.question_text }}</a></li>
-	            </ul>
-	  		    </div>
-	  		  </div>
-	  		</article>
-	    {% endfor %}
-	  {% else %}
-	    <article class="media content-section">
-	      <div class="media-body">
-	        <div class="article-metadata">
-	          <p>No questions are available.</p>
-	        </div>
-	      </div>
-	    </article>
-	  {% endif %}
-		<hr>
-		<p>The page is under development</p>
+{% if latest_question_list %}
+<p>There are {{ latest_question_list|length }} questions saved.</p>
+{% for question in latest_question_list %}
+<article class="media content-section">
+	<div class="media-body">
+		<div class="article-metadata">
+			<ul>
+				<li><a href="{% url 'polls:polls-detail' question.id %} ">{{ question.question_text }}</a></li>
+			</ul>
+		</div>
+	</div>
+</article>
+{% endfor %}
+{% else %}
+<article class="media content-section">
+	<div class="media-body">
+		<div class="article-metadata">
+			<p>No questions are available.</p>
+		</div>
+	</div>
+</article>
+{% endif %}
+<hr>
+<p>The page is under development</p>
 {% endblock content %}
