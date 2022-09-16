@@ -1,42 +1,46 @@
-{% extends "base.html" %}
+{% extends "home/base.html" %}
 
 {% block title %}
-		<title>Questions</title>
+	<title>Questions</title>
 {% endblock title %}
 
 {% block content %}
-		<br>
-		<h1>Polls Questions Page</h1>
-		<br>
-		<p>This page should show all the available questions.
-			 polls/index page should show only 5 most recent questions.
-		</p>
-	  {% if question_list %}
-			<p>There are {{ question_list|length }} questions saved.</p>
-	    {% for question in question_list %}
-	  		<article class="media content-section">
-	  		  <div class="media-body">
-	  		    <div class="article-metadata">
-	            <ul>
-								<li>
-									<a href="{% url 'polls:polls-detail' question.id %}">
-										{{ question.question_text }}
-									</a>
-								</li>
-	            </ul>
-	  		    </div>
-	  		  </div>
-	  		</article>
-	    {% endfor %}
-	  {% else %}
-	    <article class="media content-section">
-	      <div class="media-body">
-	        <div class="article-metadata">
-	          <p>No questions are available.</p>
-	        </div>
-	      </div>
-	    </article>
-	  {% endif %}
-		<hr>
-		<p>The page is under development</p>
+<br>
+<h1>Polls Questions Page</h1>
+<br>
+
+{% include "polls/main.html" %}
+
+<br>
+<p>This page should show all the available questions.
+	polls/index page should show only 5 most recent questions.
+</p>
+{% if question_list %}
+<p>There are {{ question_list|length }} questions saved.</p>
+{% for question in question_list %}
+<article class="media content-section">
+	<div class="media-body">
+		<div class="article-metadata">
+			<ul>
+				<li>
+					<a href="{% url 'polls:polls-detail' question.id %}">
+						{{ question.question_text }}
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</article>
+{% endfor %}
+{% else %}
+<article class="media content-section">
+	<div class="media-body">
+		<div class="article-metadata">
+			<p>No questions are available.</p>
+		</div>
+	</div>
+</article>
+{% endif %}
+<hr>
+<p>The page is under development</p>
 {% endblock content %}
