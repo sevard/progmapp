@@ -19,9 +19,10 @@ from django.views.generic import TemplateView
 
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='base.html'), name='main-page'), # TODO: think how to impove it.
+    path('', TemplateView.as_view(template_name='home/base.html'), name='main-page'), # TODO: think how to impove it.
     path('admin/', admin.site.urls),
     path('polls/', include('polls.urls')),
     path('games/', include('games.urls')),
     path('blog/', include('blog.urls')),
+    path('home/', include('home.urls')),
 ]
