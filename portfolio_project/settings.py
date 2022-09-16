@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'polls.apps.PollsConfig',
     'games.apps.GamesConfig',
+    'home.apps.HomeConfig',
 ]
 
 MIDDLEWARE = [
