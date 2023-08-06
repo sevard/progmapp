@@ -1,16 +1,20 @@
 {% extends "home/base.html" %}
 
-{% block title%}
-    <title>Play</title>
-{% endblock title %}
+{% block title%} <title>Play</title> {% endblock title %}
 
 {% block content %}
 
-<body>
-    <h1>Play Page</h1>
-    {% if guess > 20 %}
-    <p>You are correct, it is :{{ guess }}</p>
-    {% elif guess < 20 %} <p>Your guess is not correct</p>
+<div class="container">
+    <div class="container-fluid">
+        <h1>Play Page</h1>
+        {% if guess > 20 %}
+          <h2>Your guess is correct, <b>{{guess}}</b> is greater than 20</b></h2>
+        {% elif guess < 20 %} 
+          <h2>Your guess is NOT correct, <b>{{guess}}</b> is less than 20</h2>
+        {% else %}
+          <h2>Oh no.. you missed the bug!</h2>
         {% endif %}
-</body>
+    </div>
+</div>
+
 {% endblock content %}
