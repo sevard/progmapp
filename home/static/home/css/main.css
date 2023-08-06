@@ -15,9 +15,9 @@ ul {
   background-color: #5f788a;
 }
 
-.bg-image {
-  width: 1020px;
-}
+/* .bg-image {
+  background: rgb(219, 225, 226) url('/static/home/images/main_page_background.jpg');
+} */
 
 .site-header .navbar-nav .nav-link {
   color: #cbd5db;
