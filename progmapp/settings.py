@@ -30,7 +30,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 #  DEBUG = True if os.getenv('VALUE') exists, else DEBUG = False
 DEBUG = True if (os.getenv('PROGMAPP_SETTINGS_DEBUG')) else False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['progmapp.com', '127.0.0.1']
 
 
 # Application definition
