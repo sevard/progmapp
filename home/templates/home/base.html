@@ -13,7 +13,7 @@
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
   <!-- Custom CSS -->
-  <link type="text/css" rel="stylesheet" href="{% static 'css/main.css' %}">
+  <link type="text/css" rel="stylesheet" href="{% static 'home/css/main.css' %}">
 
   <!-- Optional JavaScript; choose one of the two! -->
 
@@ -70,7 +70,7 @@
     <br>
     <h1>This is default base.html page.</h1>
     <div class="bg-image-holder">
-      <img class="bg-image" src="static/images/main_page_background.jpg" alt="image with a laptop.">
+      <img class="bg-image" src="{% static '/home/images/main_page_background.jpg' %}" alt="image with a laptop.">
       <hr>
       <span>
         Photo by
