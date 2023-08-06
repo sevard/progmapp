@@ -128,4 +128,4 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATIC_ROOT = "/var/www/progmapp-static"
+STATIC_ROOT = os.path.join(BASE_DIR, 'progmapp-static')
