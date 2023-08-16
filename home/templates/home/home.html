@@ -1,46 +1,60 @@
 {% extends "home/base.html" %}
 
-{% block title%} <title>Progmapp Home</title> {% endblock title %}
+{% block title %} <title>Progmapp Home</title> {% endblock title %}
 
 {% block content %}
 
 <div class="container">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-8">
-                <br>
-                <h1>Software Development and Testing</h1>
-            </div>
-            <div class="col">
-                <br>
-                <quote>"Little strokes will tumble great oaks" <br>― Benjamin Franklin</quote>
-            </div>
-        </div>
-
+        <br>
+        <header class="row">
+            <h1 class="col-8">Software Development and Testing</h1>
+            <quote class="col">"Little strokes will tumble great oaks" <br>― Benjamin Franklin</quote>
+        </header>
         <hr />
+        <div class="row"> <!-- Outer row -->
+            
+            <section class="col-8">
+                <article class="row"> <!--Why is this web-site?-->
+                    <div class="col">
+                        <h3>Why is this web-site?</h3>
+                        <p>
+                            Why do we use it?
+                            It is a long established fact that a reader will be distracted by the readable content of a page when
+                            looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+                            of letters, as opposed to using 'Content here, content here', making it look like readable English. Many
+                            desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
+                            search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have
+                            evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                        </p>
+                    </div>
+                </article>
 
-        <div class="row">
-            <div class="col">
-                <h3>Why is this web-site?</h3>
-                <p>
-                    I really like building and tesing software. Over the years I have learned, and I still continue learning,
-                    various principles and techniques on how to build and test software. Hopefully this can be a place
-                    where anyone interested can find some usefull information.
-                </p>
-            </div>
-            <div class="col">
-                <h3>Who is this web-site for?</h3>
-                <p>
-                    Anyone who likes to build, test, share with others' and have fun with their product. 
-                    Those who probably want to learn more about software development or is in general curious about how things 
-                    work behind the scenes. Perhaps anyone who is interested in learing Python, HTML, CSS, JavaScript, GNU/Linux, Unix, Git 
-                    or tools for automating tests at Component, Integration or System Test levels.
-                </p>
-            </div>
-        </div>
+                <article class="row"> <!--Who is this web-site for?-->
+                    <div class="col">
+                        <h3>Who is this web-site for?</h3>
+                        <p>
+                            Why do we use it?
+                            It is a long established fact that a reader will be distracted by the readable content of a page when
+                            looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
+                            of letters, as opposed to using 'Content here, content here', making it look like readable English. Many
+                            desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
+                            search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have
+                            evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                        </p>
+                    </div>
+                </article>
+            </section>
+
+            <aside class="col">
+                <br>
+                <span class="row">
+                    <img src="static/home/images/main_page_background.jpg" alt="image with computer desk">
+                </span>
+            </aside>
+
+        </div> <!-- End of Outer row -->
     </div>
-
-
 </div>
 
 {% endblock content %}
