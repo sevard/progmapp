@@ -10,10 +10,10 @@ function convertToSha() {
     const sha384Elem = document.getElementById("sha384");
     const sha512Elem = document.getElementById("sha512");
 
-    digestMessage(inputField.value, "SHA-1").then((digestHex) => sha1Elem.innerText = digestHex);
-    digestMessage(inputField.value, "SHA-256").then((digestHex) => sha256Elem.innerText = digestHex);
-    digestMessage(inputField.value, "SHA-384").then((digestHex) => sha384Elem.innerText = digestHex);
-    digestMessage(inputField.value, "SHA-512").then((digestHex) => sha512Elem.innerText = digestHex);
+    digestMessage(inputField.value, "SHA-1").then((digestHex) => sha1Elem.value = digestHex);
+    digestMessage(inputField.value, "SHA-256").then((digestHex) => sha256Elem.value = digestHex);
+    digestMessage(inputField.value, "SHA-384").then((digestHex) => sha384Elem.value = digestHex);
+    digestMessage(inputField.value, "SHA-512").then((digestHex) => sha512Elem.value = digestHex);
 }
 
 
