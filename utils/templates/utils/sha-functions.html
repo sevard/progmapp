@@ -1,0 +1,36 @@
+{% extends "home/base.html" %}
+
+{% block title %} <title>Sha Functions</title> {% endblock title %}
+
+{% block content %}
+<div class="container">
+    <div class="container-fluid">
+        <br>
+        <br>
+        <div class="row">
+            <h1 class="col">Convert Input into SHA Hex</h1>
+        </div>
+        
+        <div class="row">
+            <textarea class="col" id="inputvalue" cols="30" rows="5" oninput="convertToSha()"></textarea>
+        </div>
+        <br>
+        
+        <div class="row">
+            <p class="col"><b>SHA-1</b>: <span id="sha1"></span></p>
+        </div>
+        
+        <div class="row">
+            <p class="col"><b>SHA-256</b>: <span id="sha256"></span></p>
+        </div>
+        
+        <div class="row">
+            <p class="col"><b>SHA-384</b>: <span id="sha384"></span></p>
+        </div>
+        
+        <div class="row">
+            <p class="col" ><b>SHA-512:</b> <span id="sha512"></span></p>
+        </div>
+    </div>
+</div>
+{% endblock content %}
