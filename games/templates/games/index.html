@@ -6,10 +6,20 @@
 <div class="container">
     <div class="container-fluid">
         <br>
-        <h1>Games What ?! </h1>
-        <h3>To guess, append a number in the URL and hit enter</h3>
-        <p>There is a bug though...</p>
-        <p>After guessing numbers less and greater than 20, try typing 20 and see the result!</p>
+        <div class="row ">
+            <ul class="col-8">
+                <li>
+                    <span>
+                        <a href="{% url 'games:guess-page' %}"> Guessing Game </a>
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <a href="{% url 'games:guess-page' %}">Some Other Game</a>
+                    </span>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
 {% endblock content %}

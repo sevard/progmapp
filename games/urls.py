@@ -5,6 +5,7 @@ from django.views.generic import TemplateView
 
 app_name = 'games'
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='games/index.html'), name='games-index'),
-    path('<slug:guess>', views.GameView.as_view())
+    path('', views.GamesView.as_view(), name='games-index'),
+    path('guess/', views.GuessView.as_view(), name='guess-page'),
+    path('guess/<slug:guess>/', views.GuessPlayView.as_view()),
 ]
