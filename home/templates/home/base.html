@@ -6,7 +6,7 @@
 
 <head>
   <!-- Required meta tags -->
-  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap CSS -->
@@ -17,6 +17,10 @@
   <link type="text/css" rel="stylesheet" href="{% static 'home/css/main.css' %}">
 
   <link rel="icon" type="image/x-icon" href="{% static 'home/images/favicon.png' %}">
+
+  <!-- Custom JavaScript for UTILS app-->
+  <script src="{% static 'utils/js/utils.js' %}" defer></script>
+
 
   {% block title %} <title>Progmapp</title> {% endblock title %}
 
@@ -44,7 +48,7 @@
             <a class="nav-link" href="{% url 'games:games-index' %}">Games</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'polls:polls-index' %}">Polls</a>
+            <a class="nav-link" href="{% url 'utils:utils-index' %}">Utils</a>
           </li>
         </ul>
       </div>
