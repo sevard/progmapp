@@ -1,0 +1,45 @@
+{% extends "home/base.html" %}
+
+{% block title %} <title>IP Lookup</title> {% endblock title %}
+
+{% block content %}
+<div class="container">
+    <div class="container-fluid">
+        <br>
+        <br>
+        <div class="row">
+            <div class="col">
+                <section>
+                    <article>
+                        <h2>Your IP: {{ ctx.ip }} </h2>
+                        <ul>
+                            <li>IP Type: {{ ctx.type }}</li>
+                            <li>Continent Code: {{ ctx.continent_code }}</li>
+                            <li>Continent Name: {{ ctx.continent_name }}</li>
+                            <li>Country Code: {{ ctx.country_code }}</li>
+                            <li>
+                                Country Name: {{ ctx.country_name }}
+                                <img src="{{ ctx.location.country_flag }}" width="20" hight="20"
+                                    alt="country flag image">
+                            </li>
+                            <li>Region Code: {{ ctx.region_code }}</li>
+                            <li>Region Name: {{ ctx.region_name }}</li>
+                            <li>City: {{ ctx.city }}</li>
+                            <li>Zip: {{ ctx.zip }}</li>
+                            <li>Latitude: {{ ctx.latitude }}</li>
+                            <li>Longitude: {{ ctx.longitude }}</li>
+                        </ul>
+                    </article>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <footer class="row page-footer">
+    <div class="col">
+        <span>
+            <p>This is a Ok footer for now</p>
+        </span>
+    </div>
+</footer> -->
+{% endblock content %}

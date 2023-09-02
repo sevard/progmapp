@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'polls.apps.PollsConfig',
     'games.apps.GamesConfig',
     'home.apps.HomeConfig',
-    'utils.apps.UtilsConfig',
+    'webtools.apps.WebtoolsConfig',
 ]
 
 MIDDLEWARE = [
