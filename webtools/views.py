@@ -22,13 +22,14 @@ def iplookup(request):
     ACCESS_KEY = os.getenv('ACCESS_KEY')
     IP_LOOKUP_URL = os.getenv('IP_LOOKUP_REQUEST_URL')
 
-    ip = request.headers.get('X-Real-Ip')
+    IP = request.headers.get('X-Real-Ip')
     # ip = request.META.get('REMOTE_ADDR')
 
+    # When on runnig local
     if (DEBUG == '1'):
-        ip = '8.8.8.8'
+        IP = '8.8.8.8'
 
-    request_url = f"{IP_LOOKUP_URL}/{ip}?access_key={ACCESS_KEY}"
+    request_url = f"{IP_LOOKUP_URL}/{IP}?access_key={ACCESS_KEY}"
     resp = requests.get(request_url)
     ctx = json.loads(resp.content)
 
