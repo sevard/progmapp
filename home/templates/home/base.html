@@ -21,10 +21,6 @@
 
   <link rel="icon" type="image/x-icon" href="{% static 'home/images/favicon.png' %}">
 
-  <!-- Custom JavaScript for Webtools app-->
-  <script src="{% static 'webtools/js/webtools.js' %}" defer></script>
-
-
   {% block title %} <title>Progmapp</title> {% endblock title %}
 
 </head>
@@ -61,6 +57,9 @@
   {% endblock navbar %}
 
   {% block content %} {% endblock content %}
+
+  <!-- Custom JavaScript for Webtools app-->
+  <script src="{% static 'webtools/js/webtools.js' %}" defer></script>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
