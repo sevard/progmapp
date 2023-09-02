@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 
-/usr/bin/gunicorn -c dev.py
+/usr/bin/gunicorn -c dev_config.py 
 
 sleep 5
 
