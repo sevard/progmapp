@@ -1,0 +1,25 @@
+{% extends "home/base.html" %}
+
+{% block title %} <title>Utils</title> {% endblock title %}
+
+{% block content %}
+<div class="container">
+    <div class="container-fluid">
+        <br>
+        <div class="row">
+            <h1 class="col">Web-tools Page</h1>
+        </div>
+        <div class="row">
+            <ul class="col">
+                <li>
+                    <a href="{% url 'webtools:webtools-sha-functions' %}">SHA converter</a>
+                </li>
+                <li>
+                    <a href="{% url 'webtools:webtools-iplookup' %}">IP Lookup</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+

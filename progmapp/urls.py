@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.views.generic import TemplateView
+# from django.views.generic import TemplateView
 
 
 urlpatterns = [
@@ -25,5 +25,5 @@ urlpatterns = [
     path('polls/', include('polls.urls')),
     path('games/', include('games.urls')),
     path('blog/', include('blog.urls')),
-    path('utils/', include('utils.urls')),
+    path('webtools/', include('webtools.urls')),
 ]

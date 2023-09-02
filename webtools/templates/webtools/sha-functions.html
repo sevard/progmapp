@@ -1,0 +1,52 @@
+{% extends "home/base.html" %}
+
+{% block title %} <title>Sha Functions</title> {% endblock title %}
+
+{% block content %}
+<div class="container">
+    <div class="container-fluid">
+        <br>
+        <br>
+        <div class="row">
+            <h1 class="col">Convert your input into sha hash value</h1>
+            <p>Read more about
+                <a href="https://en.wikipedia.org/wiki/Secure_Hash_Algorithms" target="_blank">Secure Hash Algorithms (SHA)</a>
+            </p>
+        </div>
+
+        <div class="row">
+            <textarea class="col" id="inputvalue" cols="20" rows="5" oninput="convertToSha()"></textarea>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <h4>SHA-1</h4>
+            <textarea class="col" id="sha1" cols="20" rows="3"></textarea>
+        </div>
+        <br>
+        <div class="row">
+            <h4>SHA-256</h4>
+            <textarea class="col" id="sha256" cols="20" rows="3"></textarea>
+        </div>
+        <br>
+        <div class="row">
+            <h4>SHA-384</h4>
+            <textarea class="col" id="sha384" cols="20" rows="3"></textarea>
+        </div>
+        <br>
+        <div class="row">
+            <h4>SHA-512</h4>
+            <textarea class="col" id="sha512" cols="20" rows="3"></textarea>
+        </div>
+    </div>
+</div>
+
+
+<footer class="row page-footer">
+    <div class="col">
+        <span>
+            <p>This is a Ok footer for now</p>
+        </span>
+    </div>
+</footer>
+{% endblock content %}

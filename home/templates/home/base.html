@@ -5,6 +5,9 @@
 <html lang="en">
 
 <head>
+  <meta name="author" content="sergey vardanyan">
+  <meta name="email" content="srg.v@posteo.us">
+
   <!-- Required meta tags -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,8 +21,8 @@
 
   <link rel="icon" type="image/x-icon" href="{% static 'home/images/favicon.png' %}">
 
-  <!-- Custom JavaScript for UTILS app-->
-  <script src="{% static 'utils/js/utils.js' %}" defer></script>
+  <!-- Custom JavaScript for Webtools app-->
+  <script src="{% static 'webtools/js/webtools.js' %}" defer></script>
 
 
   {% block title %} <title>Progmapp</title> {% endblock title %}
@@ -48,7 +51,7 @@
             <a class="nav-link" href="{% url 'games:games-index' %}">Games</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'utils:utils-index' %}">Utils</a>
+            <a class="nav-link" href="{% url 'webtools:webtools-index' %}">Webtools</a>
           </li>
         </ul>
       </div>
