@@ -1,60 +1,57 @@
 {% extends "home/base.html" %}
 
-{% block title %} <title>Progmapp Home</title> {% endblock title %}
+{% block title %} <title>Portfolio Home</title> {% endblock title %}
 
 {% block content %}
 
-<div class="container">
-    <div class="container-fluid">
-        <br>
-        <header class="row">
-            <h1 class="col-8">Software Development and Testing</h1>
-            <quote class="col">"Little strokes will tumble great oaks" <br>― Benjamin Franklin</quote>
-        </header>
-        <hr />
-        <div class="row"> <!-- Outer row -->
-            
-            <section class="col-8">
-                <article class="row"> <!--Why is this web-site?-->
-                    <div class="col">
-                        <h3>Why is this web-site?</h3>
-                        <p>
-                            Why do we use it?
-                            It is a long established fact that a reader will be distracted by the readable content of a page when
-                            looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-                            of letters, as opposed to using 'Content here, content here', making it look like readable English. Many
-                            desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
-                            search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have
-                            evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                        </p>
-                    </div>
-                </article>
-
-                <article class="row"> <!--Who is this web-site for?-->
-                    <div class="col">
-                        <h3>Who is this web-site for?</h3>
-                        <p>
-                            Why do we use it?
-                            It is a long established fact that a reader will be distracted by the readable content of a page when
-                            looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-                            of letters, as opposed to using 'Content here, content here', making it look like readable English. Many
-                            desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
-                            search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have
-                            evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                        </p>
-                    </div>
-                </article>
-            </section>
-
-            <aside class="col">
-                <br>
-                <span class="row">
-                    <img src="static/home/images/main_page_background.jpg" alt="image with computer desk">
-                </span>
-            </aside>
-
-        </div> <!-- End of Outer row -->
+<main class="container">
+    <br>
+    <div class="row">
+        <h1 class="col-8">Welcome Page</h1>
+        <quote class="col-4">"Little strokes will tumble great oaks" <br>― Benjamin Franklin</quote>
     </div>
-</div>
+    <hr />
+    <div class="row"> <!-- Outer row -->
+        <section class="col-8">
+            <h2>Hello! I am Sergey Vardanyan</h3>
+            <article class="row"> <!--Why is this web-site?-->
+                <div class="col">
+                    <p>
+                        I am a <b>software developer</b> 
+                        with years of experience, specializing in web development and testing. 
+                        I am proficient in various programming languages and technologies.
+                        Over the years, I've honed my skills to deliver top-notch solutions 
+                        that meet the highest standards of quality and efficiency. 
+                        Whether it's crafting responsive web applications or ensuring rigorous testing protocols, 
+                        I thrive on challenges and I am committed to delivering excellence in every project I undertake.
+                    </p>
+                </div>
+            </article>
+
+            <article class="row"> <!--Who is this web-site for?-->
+                <div class="col">
+                    <h3>Who is this web-site for?</h3>
+                    <p>
+                        I created this website to showcase my projects in one convenient location 
+                        and to highlight my skills. In addition, I will post some usefull
+                        information to people who are interested in web-development and testing.
+                        I'm passionate about software development, and I'm truly amazed by how the internet connects people worldwide. 
+                        It's easy to take for granted, but there's a rich history behind it, 
+                        and it took the collective effort of countless engineers to make it as seamless as it is today.
+                    </p>
+                </div>
+            </article>
+
+        </section>
+
+        <aside class="col-4">
+            <br>
+            <span class="row">
+                <img src="static/home/images/me3.jpg" alt="image with computer desk">
+            </span>
+        </aside>
+
+    </div> <!-- End of Outer row -->
+</main>
 
 {% endblock content %}
