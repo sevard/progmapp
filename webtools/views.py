@@ -18,20 +18,17 @@ def sha_functions(request):
 
 
 def iplookup(request):
-    DEBUG = os.getenv('PROGMAPP_SETTINGS_DEBUG')
     ACCESS_KEY = os.getenv('ACCESS_KEY')
     IP_LOOKUP_URL = os.getenv('IP_LOOKUP_REQUEST_URL')
-
     IP = request.headers.get('X-Real-Ip')
-    # ip = request.META.get('REMOTE_ADDR')
+    # IP = request.META.get('REMOTE_ADDR')
 
     # When on runnig local
-    if (DEBUG == '1'):
-        IP = '8.8.8.8'
+    if not IP:
+        IP = os.getenv("LOCAL_IP")
 
     request_url = f"{IP_LOOKUP_URL}/{IP}?access_key={ACCESS_KEY}"
     resp = requests.get(request_url)
     ctx = json.loads(resp.content)
-
     response = render(request, 'webtools/iplookup.html', {'ctx': ctx})
     return response

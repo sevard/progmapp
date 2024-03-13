@@ -28,7 +28,10 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #  DEBUG = True if os.getenv('VALUE') exists, else DEBUG = False
-DEBUG = True if (os.getenv('PROGMAPP_SETTINGS_DEBUG')) else False
+if os.getenv("DJANGO_SETTINGS_DEBUG"):
+    DEBUG = True
+else:
+    DEBUG = False 
 
 ALLOWED_HOSTS = ['progmapp.com', '127.0.0.1']
 
