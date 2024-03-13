@@ -2,7 +2,7 @@
 
 {% load static %}
 
-<html lang="en">
+<html class="h-100" lang="en">
 
 <head>
   <meta name="author" content="sergey vardanyan">
@@ -25,7 +25,7 @@
 
 </head>
 
-<body>
+<body class="d-flex flex-column h-100">
   {% block navbar %}
 
   <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom border-body" data-bs-theme="dark">
@@ -58,6 +58,15 @@
 
   {% block content %} {% endblock content %}
 
+  <footer class="footer mt-auto py-3">
+    <div class="container">
+        <span class="text-muted"><a href="#">GitHub</a></span>
+        <span class="text-muted"><a href="#">Linkedin</a></span>
+        <span class="text-muted"><a href="#">Facebook</a></span>
+        <hr>
+        <span>Copyright &#169; Sergey Vardanyan</span>
+    </div>
+  </footer>
   <!-- Custom JavaScript for Webtools app-->
   <script src="{% static 'webtools/js/webtools.js' %}" defer></script>
 
