@@ -1,10 +1,6 @@
 
-let myName = "sergey";
-console.log(myName);
-
-
 function convertToSha() {
-    const inputField = document.getElementById("inputvalue");
+    const inputField = document.getElementById("input-text");
     const sha1Elem = document.getElementById("sha1");
     const sha256Elem = document.getElementById("sha256");
     const sha384Elem = document.getElementById("sha384");
@@ -18,6 +14,10 @@ function convertToSha() {
 
 
 async function digestMessage(message, algorithm) {
+    if (!message) {
+        return "";
+    }
+
     const msgUint8 = new TextEncoder().encode(message); // encode as (utf-8) Uint8Array
     const hashBuffer = await crypto.subtle.digest(algorithm, msgUint8); // hash the message
     const hashArray = Array.from(new Uint8Array(hashBuffer)); // convert buffer to byte array

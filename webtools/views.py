@@ -14,7 +14,7 @@ def index(request):
 
 
 def sha_functions(request):
-    return render(request, 'webtools/sha-functions.html')
+    return render(request, 'webtools/sha_functions.html')
 
 
 def iplookup(request):
