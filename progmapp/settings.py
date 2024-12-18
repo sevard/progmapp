@@ -27,11 +27,8 @@ load_dotenv()
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#  DEBUG = True if os.getenv('VALUE') exists, else DEBUG = False
-if os.getenv("DJANGO_SETTINGS_DEBUG"):
-    DEBUG = True
-else:
-    DEBUG = False 
+DEBUG = True if os.getenv('DJANGO_ENV') == "dev" else False
+# print("DEBUG=", type(DEBUG), DEBUG)
 
 ALLOWED_HOSTS = ['progmapp.com', '127.0.0.1']
 
@@ -118,7 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/New_York'
 
 USE_I18N = True
 
@@ -128,8 +125,8 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.1/howto/static-files/
+# https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
 
-STATIC_ROOT = '/var/www/static'
+# STATIC_ROOT = '/var/www/static'

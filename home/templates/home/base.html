@@ -11,23 +11,29 @@
   <!-- Required meta tags -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  
+  <!--Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
   <!-- Custom CSS -->
-  <link type="text/css" rel="stylesheet" href="{% static 'home/css/main.css' %}">
-
+  <link type="text/css" rel="stylesheet" href="{% static 'home/custom.css' %}">
   <link rel="icon" type="image/x-icon" href="{% static 'home/images/favicon.png' %}">
 
-  {% block title %} <title>Progmapp</title> {% endblock title %}
+  <!-- Custom JavaScript for Webtools app-->
+  <script src="{% static 'webtools/js/webtools.js' %}" defer></script>
+
+  {% block title %} <title> Progmapp </title> {% endblock title %}
 
 </head>
 
 <body class="d-flex flex-column h-100">
   {% block navbar %}
-
   <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom border-body" data-bs-theme="dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="{% url 'home:main-page' %}">PROGMAPP</a>
@@ -53,22 +59,19 @@
       </div>
     </div>
   </nav>
-
   {% endblock navbar %}
 
   {% block content %} {% endblock content %}
 
   <footer class="footer mt-auto py-3">
     <div class="container">
-        <span class="text-muted"><a href="#">GitHub</a></span>
-        <span class="text-muted"><a href="#">Linkedin</a></span>
-        <span class="text-muted"><a href="#">Facebook</a></span>
-        <hr>
-        <span>Copyright &#169; Sergey Vardanyan</span>
+      <div class="row">
+        <div class="col">
+          <span>Copyright &#169; Sergey Vardanyan</span>
+        </div>
+      </div>
     </div>
   </footer>
-  <!-- Custom JavaScript for Webtools app-->
-  <script src="{% static 'webtools/js/webtools.js' %}" defer></script>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"

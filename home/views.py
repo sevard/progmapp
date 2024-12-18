@@ -1,10 +1,15 @@
 from django.shortcuts import render
 
 
-def home(request):
-    return render(request, 'home/home.html')
+def welcome_page(request):
+    context = {'title': 'About'}
+    return render(request, 'home/welcome.html', context)
 
 
 def about(request):
-    context = {'title': 'About'}
-    return render(request, 'home/about.html', context)
+    return render(request, 'home/about.html')
+
+
+def certs(request):
+    return render(request, 'home/certs.html')
+
