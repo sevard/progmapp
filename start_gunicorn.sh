@@ -24,21 +24,25 @@ fi
 
 # start gunicorn and wait PID file
 /usr/bin/gunicorn -c $GUNICORN_CONFIG_FILE
-start_server_rc=$?
-if [ $start_server_rc -ne 0 ]; then
-    echo "Cannot start server.."
+rc=$?
+if [ $rc -ne 0 ]; then
+    echo "Failed to start gunicorn server.."
     exit 3
 fi
 
 PIDFILE=/var/run/gunicorn/dev.pid
 while true; do
+
     timestamp=$(date +"%a %Y-%m-%d %T")
-    echo -ne "Waiting.. $timestamp \r"
+
+    echo -ne "Waiting for gunicorn to start.. $timestamp \r"
     sleep 1
+
     if test -f "$PIDFILE"; then
-	echo $timestamp
-	echo -ne "gunicorn server started. PID: $(cat $PIDFILE)\n"
-	exit 0
+	    echo $timestamp
+	    echo -ne "gunicorn started. pid $(cat $PIDFILE)\n"
+	    exit 0
     fi
+
 done
 
