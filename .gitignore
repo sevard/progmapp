@@ -1,3 +1,6 @@
+# do not track images
+home/static/home/images/me*
+
 # Django #
 *.log
 *.pot
