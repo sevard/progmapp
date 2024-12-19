@@ -4,7 +4,7 @@ html {
 
 body {
   height: 100%;
-  background: #efefee;
+  /* background: #efefee; */
   color: #333333;
   font-family: "Fredoka", sans-serif;
   font-optical-sizing: auto;
@@ -30,7 +30,7 @@ footer {
 
 .my-photo {
   width: 90%;
-  filter: grayscale(65%);
+  filter: grayscale(55%);
   box-shadow: 5px 4px 15px -2px rgba(0,0,0,0.55);
   -webkit-box-shadow: 5px 4px 15px -2px rgba(0,0,0,0.55);
   -moz-box-shadow: 5px 4px 15px -2px rgba(0,0,0,0.55);
@@ -53,8 +53,8 @@ footer {
 }
 
 .intro p {
-  font-size: 1rem; 
-  font-weight: 300;
+  font-size: 1.2rem; 
+  font-weight: 500;
 }
 
 .social-links a {
