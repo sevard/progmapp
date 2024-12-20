@@ -27,8 +27,7 @@ load_dotenv()
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True if os.getenv('DJANGO_ENV') == "dev" else False
-# print("DEBUG=", type(DEBUG), DEBUG)
+DEBUG = False 
 
 ALLOWED_HOSTS = ['progmapp.com', '127.0.0.1']
 
