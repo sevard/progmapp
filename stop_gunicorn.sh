@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-PIDFILE=/var/run/gunicorn/dev.pid
+PIDFILE=/var/run/gunicorn/prod.pid
+#PIDFILE=/var/run/gunicorn/dev.pid
 
 if test -f "$PIDFILE"; then
     echo "Found $PIDFILE"
