@@ -3,14 +3,13 @@
 {% block title %} <title>Web-tools</title> {% endblock title %}
 
 {% block content %}
-<div class="container">
-    <div class="container-fluid">
-        <br>
-        <div class="row">
-            <h1 class="col">Web-tools Page</h1>
-        </div>
-        <div class="row">
-            <ul class="col">
+
+<main class="container">
+    <br>
+    <section class="row">
+        <div class="col">
+            <h1>Web-tools Page</h1>
+            <ul>
                 <li>
                     <a href="{% url 'webtools:webtools-sha-functions' %}">SHA converter</a>
                 </li>
@@ -19,7 +18,7 @@
                 </li>
             </ul>
         </div>
-    </div>
-</div>
-{% endblock content %}
+    </section>
+</main>
 
+{% endblock content %}

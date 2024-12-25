@@ -1,25 +1,89 @@
 {% extends "home/base.html" %}
 
-{% block title %} <title>About</title> {% endblock title %}
+{% load static %}
+
+{% block title %} <title>Portfolio Home</title> {% endblock title %}
 
 {% block content %}
-<div class="container">
-    <div class="container-fluid">
-        <br>
-        <div class="row">
-            <h1 class="col">About Page</h1>
-        </div>
-        <section class="row">
-            <p>
-                Why do we use it?
-                It is a long established fact that a reader will be distracted by the readable content of a page when
-                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-                of letters, as opposed to using 'Content here, content here', making it look like readable English. Many
-                desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
-                search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have
-                evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-            </p>
-        </section>
+
+<main class="container">
+
+    <div class="row">
+        <p class="col top-name">Sergey Vardanyan</p>
     </div>
-</div>
+
+    <section class="row align-items-center">
+        <article class="col-7">
+            <h1>Hi! It's me, Sergey Vardanyan.</h1>
+            <p class="top-name">I am a Software developer</p>
+
+            <button type="button" class="btn btn-dark btn-lg">
+                <span>Send message</span>
+            </button>
+        </article>
+
+        <div class="col-5">
+            <img class="my-photo" src="{% static '/home/images/me1.jpg' %}" alt="sergey vardanyan">
+        </div>
+    </section>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="row">
+        <p class="col social-links">
+            <a href="https://www.linkedin.com/in/sergey-vardanyan-724811229/" rel="nofollow" target="_blank">LinkedIn</a> / 
+            <a href="https://github.com/sevard" rel="nofollow" target="_blank">GitHub</a> / 
+        </p>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <section class="row">
+        <article class="col-7 intro">
+            <h2>— Experience</h2>
+            <hr>
+            <p>
+                I am proficient in working with a number of technologies.  
+                Over the years, I've honed my skills to deliver top-notch solutions 
+                that meet the highest standards of quality and efficiency.
+                While crafting web applications, I thrive on challenges 
+                and I am committed to delivering excellence in every project I undertake.
+            </p>
+        </article>
+        <article class="col-5 intro">
+            <h2>— Skills</h2>
+            <hr>
+            <div class="row row-cols-2">
+                <ul class="col">
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>SQL</li>
+                    <li>Shell Script</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>HTML/CSS</li>
+                </ul>
+                <ul class="col">
+                    <li>Django</li>
+                    <li>Flask</li>
+                    <li>FastAPI</li>
+                    <li>SpringBoot</li>
+                    <li>Linux</li>
+                    <li>Git</li>
+                    <li>GitHub</li>
+                </ul>
+            </div>
+        </article>
+    </section>
+
+    <br>
+    <br>
+    <br>
+
+</main>
+
 {% endblock content %}

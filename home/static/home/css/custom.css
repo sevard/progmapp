@@ -4,26 +4,68 @@ html {
 
 body {
   height: 100%;
-  background: #f5fcff;
+  /* background: #efefee; */
   color: #333333;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: #444444;
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
 
 ul {
   margin: 0;
 }
 
+footer {
+    /* background-color: #212529; */
+    background-color: #343535;
+    color: white;
+    text-align: center;
+}
+
+.my-photo {
+  width: 90%;
+  filter: grayscale(55%);
+  box-shadow: 5px 4px 15px -2px rgba(0,0,0,0.55);
+  -webkit-box-shadow: 5px 4px 15px -2px rgba(0,0,0,0.55);
+  -moz-box-shadow: 5px 4px 15px -2px rgba(0,0,0,0.55);
+}
+
+.content-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+/* p tag with my name */
+.top-name {
+  padding: 0.5em 0;
+  font-size: calc(1.3rem + 0.3vw);
+}
+
+.intro h2 {
+  font-size: 1.5rem; 
+  font-weight: 300;
+}
+
+.intro p {
+  font-size: 1.2rem; 
+  font-weight: 500;
+}
+
+.social-links a {
+  font-size: large;
+  color: #333333;
+}
+/*
 .bg-steel {
   background-color: #5f788a;
 }
 
-/* .bg-image {
+.bg-image {
   background: rgb(219, 225, 226) url('/static/home/images/main_page_background.jpg');
-} */
-
+} 
+  
 .site-header .navbar-nav .nav-link {
   color: #cbd5db;
 }
@@ -89,14 +131,4 @@ a.article-title:hover {
 
 .account-heading {
   font-size: 2.5rem;
-}
-
-.page-footer {
-  position: relative;
-  height: 20%;
-  margin-top: 2rem;
-  padding: 3rem 1rem;
-  background-color: #263a48;
-  color: aliceblue;
-  text-align: center;
-}
+} */

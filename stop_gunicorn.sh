@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
-PIDFILE=/var/run/gunicorn/dev.pid
+PIDFILE=/var/run/gunicorn/prod.pid
+#PIDFILE=/var/run/gunicorn/dev.pid
 
 if test -f "$PIDFILE"; then
     echo "Found $PIDFILE"
     PID=$(cat $PIDFILE)
     kill $PID
-    kill_rc=$?
-    echo "stopping... $PID"
-    echo "gunicorn was stopped with (exit code $kill_rc)"
+    sleep 3
+    ps -ef | grep gunicorn
     exit 0
 fi
 

@@ -9,5 +9,5 @@ urlpatterns = [
     # ex: /webtools/sha-functions/
     path('sha-functions/', views.sha_functions, name='webtools-sha-functions'),
     # ex: /webtools/iplookup/
-    path('iplookup', views.iplookup, name='webtools-iplookup'),
+    path('iplookup/', views.iplookup, name='webtools-iplookup'),
 ]
