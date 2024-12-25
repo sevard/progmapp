@@ -1,359 +1,47 @@
-<!DOCTYPE html>
+{% extends "home/base.html" %}
 
-<html class="h-100" lang="en">
-    <head>
-        <!--Google fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+{% load static %}
 
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-        <link href="styles.css" rel="stylesheet">
-        <title>Certificates</title>
+{% block title %}<title>Certificates</title>{% endblock title %}
 
-        <title>Certificates</title>
-    
-    </head>
-    
-    <body class="d-flex flex-column h-100">
-        <header>
-            <nav class="navbar navbar-content navbar-expand-lg navbar-dark bg-dark">
-                <div class="container-fluid">
+{% block content %}
+<main class="flex-shrink-0">
+    <section class="container fredoka-gfont">
+        <h1>Certifications</h1>
+        <br>
+        <h2>Continuous learnng helps me to expand my perspective and sharpen my skills. </h2>
+        <hr>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
 
-                    <a class="navbar-brand" href="index.html">Sergey Vardanyan</a>
+        {% for cert in certificates %}
 
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+            <div class="card-group">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <p class="card-text"> <b>{{ cert.title }}</b> </p>
+                        <p>Completion Date: {{ cert.completed_on }}</p>
+                        <p>{{ cert.description }}</p>
 
-                    <div class="collapse navbar-collapse" id="navbarText">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">About Me</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="certs.html">Certifications</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="skills.html">Skills</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="projects.html">Projects</a>
-                        </li>
-                    </ul>
-                    <span class="navbar-text">
-                        Welcome to my website!
-                    </span>
-                    </div>
-                </div>
-            </nav>
-        </header>
-
-        <main class="flex-shrink-0">
-            <h1>Certifications</h1>
-            <section class="container fredoka-gfont">
-                <h2>Certifications I have taken and completed</h2>
-                <h3>By continuing to learn, I do my best in expanding my perspective, 
-                    sharpening my existing skills, and making myselft even 
-                    more in demand.</h3>
-                <hr>
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-                    <div class="col certs">
-                        <p><b>Programming for Everybody <br> (Getting Started with Python)</b></p>
-                        <p>Completion Date: April 9, 2019</p>
-                        <p>Sergey Vardanyan's account is verified.
-                           Coursera certifies their successful completion of Programming for Everybody (Getting Started with Python)
-                        </p>
-                        <a href="https://coursera.org/verify/5SNR2ZG8Q6Z7" target="_blank">Verify on Coursera</a>
-                    </div>
-                    <div class="col certs">
-                        <p><b>Python Data Structures</b></p>
-                        <p>Completion Date: April 23, 2019</p>
-                        <p>Sergey Vardanyan's account is verified. Coursera certifies their successful completion of Python Data Structures
-                        </p>
-                        <a href="https://coursera.org/verify/PK36LHX8MN4M" target="_blank">Verify on Coursera</a>
-                    </div>
-                    <div class="col certs">
-                        <p><b>Using Databases with Python</b></p>
-                        <p>Completion Date: July 4, 2019</p>
-                        <p>Sergey Vardanyan's account is verified. Coursera certifies their successful completion of Using Databases with Python</p>
-                        <a href="https://coursera.org/verify/EGL5NUSFB6N2" target="_blank">Verify on Coursera</a>
-                    </div>
-                    <div class="col certs">
-                        <p><b>Using Python to Access Web Data</b></p>
-                        <p>Completion Date: June 7, 2019</p>
-                        <p>
-                            Sergey Vardanyan's account is verified. Coursera certifies their successful completion of Using Python to Access Web Data
-                        </p>
-                        <a href="https://coursera.org/verify/5DB9HS8SQ6M6" target="_blank">Verify on Coursera</a>
-                    </div>
-                </div>
-                <br>
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-                    <div class="col certs">
-                        <p><b>Advanced TestNG Framework and Integration with Selenium</b></p>
-                        <p>Completion Date: January 9, 2022</p>
-                        <p>Sergey Vardanyan's account is verified. Coursera certifies their successful completion of Advanced TestNG Framework and Integration with Selenium</p>
-                        <a href="https://coursera.org/verify/8NUFTJS997ZD" target="_blank">Verify on Coursera</a>
-                    </div>
-                    <div class="col certs">
-                        <p><b>Internet History, Technology, and Security</b></p>
-                        <p>Completion Date: January 15, 2022</p>
-                        <p>Sergey Vardanyan's account is verified. Coursera certifies their successful completion of Internet History, Technology, and Security</p>
-                        <a href="https://coursera.org/verify/JQ5C8Z84FJYX" target="_blank">Verify on Coursera</a>
-                    </div>
-                    <div class="col certs">
-                        <p><b>Python Data Structures and Algorithms</b></p>
-                        <p>Completion Date: February 24, 2022</p>
-                        <p>Certificate of Completion from Linkedin Learning</p>
-                        <a href="#" target="_blank">Verify on Linkedin</a>
-                    </div>
-                    <div class="col certs">
-                        <p><b>Python Core </b></p>
-                        <p>Completion Date: February 25, 2020</p>
-                        <p>Certificate of Completion from Solo Learn: Certificate #CT-HU8VAVI9</p>
-                        <a href="https://www.sololearn.com/certificates/CT-HU8VAVI9" target="_blank">Verify on Solo Learn</a>
-                    </div>
-                </div>
-                <br>
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-                    <div class="col certs">
-                        <div class="card shadow-sm">
-
-                            <div class="card-body">
-                                <p class="card-text"> <b>CS50 - In Progress/b> </p>
-                                <p>Completion Date: 00/00/00 </p>
-                                <p>Certificate of Completion Harward Univercity: The course is not yet completed </p>
-
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="#" target="_blank">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">Verify</button>
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="col certs">
-                        <div class="card shadow-sm">
-                            <div class="card-body">
-                                <p class="card-text"> <b>HTML</b> </p>
-                                <p>Completion Date: June 01, 2021</p>
-                                <p>Certificate of Completion from Solo Learn: Certificate #CT-RQ4KNMBA</p>
-
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="https://www.sololearn.com/certificates/CT-RQ4KNMBA" target="_blank">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">Verify</button>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="col certs">
-                        <div class="card shadow-sm">
-                            <div class="card-body">
-                                <p class="card-text"> <b>IN PROGRESS</b> </p>
-                                <p>Completion Date: --/--/-- </p>
-                                <p>Certificate of Completion from ------------------------------------ </p>
-
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="#" target="_blank">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">Verify</button>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="col certs">
-                        <div class="card shadow-sm">
-                            <div class="card-body">
-                                <p class="card-text"> <b>IN PROGRESS</b> </p>
-                                <p>Completion Date: --/--/-- </p>
-                                <p>Certificate of Completion from ------------------------------------ </p>
-
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="#" target="_blank">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">Verify</button>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </section>
-            
-            <section class="container fredoka-gfont">
-                <h2>Certifications I have taken and completed</h2>
-                <h3>By continuing to learn, I do my best in expanding my perspective, sharpening my existing
-                    skills, and making myselft even more in demand.</h3>
-                <hr>
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-                    <div class="col certs">
-                        <p><b>Programming for Everybody <br> (Getting Started with Python)</b></p>
-                        <p>Completion Date: April 9, 2019</p>
-                        <p>Sergey Vardanyan's account is verified.
-                           Coursera certifies their successful completion of Programming for Everybody (Getting Started with Python)
-                        </p>
-                        <a href="https://coursera.org/verify/5SNR2ZG8Q6Z7" target="_blank">Verify on Coursera</a>
-                    </div>
-                    <div class="col certs">
-                        <p><b>Python Data Structures</b></p>
-                        <p>Completion Date: April 23, 2019</p>
-                        <p>Sergey Vardanyan's account is verified. Coursera certifies their successful completion of Python Data Structures
-                        </p>
-                        <a href="https://coursera.org/verify/PK36LHX8MN4M" target="_blank">Verify on Coursera</a>
-                    </div>
-                    <div class="col certs">
-                        <p><b>Using Databases with Python</b></p>
-                        <p>Completion Date: July 4, 2019</p>
-                        <p>Sergey Vardanyan's account is verified. Coursera certifies their successful completion of Using Databases with Python</p>
-                        <a href="https://coursera.org/verify/EGL5NUSFB6N2" target="_blank">Verify on Coursera</a>
-                    </div>
-                    <div class="col certs">
-                        <p><b>Using Python to Access Web Data</b></p>
-                        <p>Completion Date: June 7, 2019</p>
-                        <p>
-                            Sergey Vardanyan's account is verified. Coursera certifies their successful completion of Using Python to Access Web Data
-                        </p>
-                        <a href="https://coursera.org/verify/5DB9HS8SQ6M6" target="_blank">Verify on Coursera</a>
-                    </div>
-                </div>
-                <br>
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-                    <div class="col certs">
-                        <p><b>Advanced TestNG Framework and Integration with Selenium</b></p>
-                        <p>Completion Date: January 9, 2022</p>
-                        <p>Sergey Vardanyan's account is verified. Coursera certifies their successful completion of Advanced TestNG Framework and Integration with Selenium</p>
-                        <a href="https://coursera.org/verify/8NUFTJS997ZD" target="_blank">Verify on Coursera</a>
-                    </div>
-                    <div class="col certs">
-                        <p><b>Internet History, Technology, and Security</b></p>
-                        <p>Completion Date: January 15, 2022</p>
-                        <p>Sergey Vardanyan's account is verified. Coursera certifies their successful completion of Internet History, Technology, and Security</p>
-                        <a href="https://coursera.org/verify/JQ5C8Z84FJYX" target="_blank">Verify on Coursera</a>
-                    </div>
-                    <div class="col certs">
-                        <p><b>Python Data Structures and Algorithms</b></p>
-                        <p>Completion Date: February 24, 2022</p>
-                        <p>Certificate of Completion from Linkedin Learning</p>
-                        <a href="#" target="_blank">Verify on Linkedin</a>
-                    </div>
-                    <div class="col certs">
-                        <p><b>Python Core </b></p>
-                        <p>Completion Date: February 25, 2020</p>
-                        <p>Certificate of Completion from Solo Learn: Certificate #CT-HU8VAVI9</p>
-                        <a href="https://www.sololearn.com/certificates/CT-HU8VAVI9" target="_blank">Verify on Solo Learn</a>
-                    </div>
-                </div>
-                <br>
-
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-                    <div class="col certs">
-                        <p><b>CS50 - In Progress</b></p>
-                        <p>Completion Date: #</p>
-                        <p>To be updated</p>
-                        <a href="#" target="_blank">Verify</a>
-                    </div>
-
-                    <div class="col certs">
-                        <div class="card shadow-sm">
-
-                            <div class="card-body">
-                                <p class="card-text"> <b>CS50 - In Progress/b> </p>
-                                <p>Completion Date: 00/00/00 </p>
-                                <p>Certificate of Completion Harward Univercity: The course is not yet completed </p>
-
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="#" target="_blank">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">Verify</button>
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col certs">
-                        <div class="card shadow-sm">
-                            <div class="card-body">
-                                <p class="card-text"> <b>HTML</b> </p>
-                                <p>Completion Date: June 01, 2021</p>
-                                <p>Certificate of Completion from Solo Learn: Certificate #CT-RQ4KNMBA</p>
-
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="https://www.sololearn.com/certificates/CT-RQ4KNMBA" target="_blank">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">Verify</button>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col certs">
-                        <div class="card shadow-sm">
-                            <div class="card-body">
-                                <p class="card-text"> <b>IN PROGRESS</b> </p>
-                                <p>Completion Date: --/--/-- </p>
-                                <p>Certificate of Completion from ------------------------------------ </p>
-
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="#" target="_blank">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">Verify</button>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col certs">
-                        <div class="card shadow-sm">
-                            <div class="card-body">
-                                <p class="card-text"> <b>IN PROGRESS</b> </p>
-                                <p>Completion Date: --/--/-- </p>
-                                <p>Certificate of Completion from ------------------------------------ </p>
-
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="#" target="_blank">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">Verify</button>
-                                        </a>
-                                    </div>
-                                </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="{{ cert.certificate_url }}" target="_blank">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Verify</button>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                </div>
-
-            </section>
-        </main>
-
-        <footer class="footer mt-auto py-3">
-            <div class="container">
-                <span class="text-muted">Place sticky footer content here.</span>
-                <hr>
-                <span>Copyright &#169; Sergey Vardanyan</span>
             </div>
-        </footer>
-    </body>
-</html>
+
+        {% endfor %}
+
+        </div>
+
+        <br/>
+        <br/>
+        <br/>
+    </section>
+</main>
+
+
+{% endblock content %}

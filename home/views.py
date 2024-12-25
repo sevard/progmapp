@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .certs import data
 
 def welcome_page(request):
     context = {'title': 'About'}
@@ -11,5 +11,6 @@ def about(request):
 
 
 def certs(request):
-    return render(request, 'home/certs.html')
+    ctx = {"certificates": data}
+    return render(request, 'home/certs.html', ctx)
 
