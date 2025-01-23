@@ -27,9 +27,10 @@ load_dotenv()
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False 
+DEBUG = False if os.getenv('PRODENV') else True
+# print(f"PRODENV={os.getenv('PRODENV')}", f"DEBUG={DEBUG}")
 
-ALLOWED_HOSTS = ['progmapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['vardanyan.info', 'progmapp.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -128,4 +129,4 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATIC_ROOT = '/var/www/static'
+STATIC_ROOT = '/var/www/data/static/'
