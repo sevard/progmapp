@@ -27,38 +27,38 @@
   <link rel="apple-touch-icon" sizes="180x180" href="{% static 'home/images/favicon_io/apple-touch-icon.png' %}">
   <link rel="icon" type="image/png" sizes="32x32" href="{% static 'home/images/favicon_io/favicon-32x32.png' %}">
   <link rel="icon" type="image/png" sizes="16x16" href="{% static 'home/images/favicon_io/favicon-16x16.png' %}">
-  <link rel="manifest" href="{% static 'home/images/favicon_io/site.webmanifest' %}">
+  <!-- <link rel="manifest" href="{% static 'home/images/favicon_io/site.webmanifest' %}"> -->
 
   <!-- Custom JavaScript for Webtools app-->
   <script src="{% static 'webtools/js/webtools.js' %}" defer></script>
 
-  {% block title %} <title> Progmapp </title> {% endblock title %}
+  {% block title %} <title>Welcome</title> {% endblock title %}
 
 </head>
 <body class="d-flex flex-column h-100 bg-body-secondary">
   {% block navbar %}
-  <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom border-body" data-bs-theme="dark"> -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-body" data-bs-theme="dark">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark p-3 fs-4" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="{% url 'home:main-page' %}">PROGMAPP</a>
+
+      <a class="navbar-brand p-2" href="{% url 'home:about' %}">- SERGEY VARDANYAN -</a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav ps-3">
           <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{% url 'home:home-about' %}">About</a>
+              <a class="nav-link" href="{% url 'home:certs' %}">Certifications</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="{% url 'home:home-certs' %}">Certifications</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'webtools:webtools-index' %}">Webtools</a>
+            <a class="nav-link" href="{% url 'webtools:webtools' %}">Webtools</a>
           </li>
         </ul>
       </div>
-    </div>
+
+    </div> <!--container-fluid-->
   </nav>
   {% endblock navbar %}
 
@@ -68,7 +68,7 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <span>Copyright &#169; Sergey Vardanyan</span>
+          <span>Created by me; Sergey Vardanyan</span>
         </div>
       </div>
     </div>

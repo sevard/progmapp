@@ -5,7 +5,7 @@ from . import views
 app_name = 'webtools'
 urlpatterns = [
     # ex: /webtools/
-    path('', views.index, name='webtools-index'),
+    path('', views.index, name='webtools'),
     # ex: /webtools/sha-functions/
     path('sha-functions/', views.sha_functions, name='webtools-sha-functions'),
     # ex: /webtools/iplookup/
