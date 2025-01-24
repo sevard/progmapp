@@ -1,24 +1,25 @@
 {% extends "home/base.html" %}
 
-{% block title %} <title>Web-tools</title> {% endblock title %}
+{% block title %} <title>Web Tools</title> {% endblock title %}
 
 {% block content %}
 
-<main class="container">
-    <br>
-    <section class="row">
-        <div class="col">
-            <h1>Web-tools Page</h1>
-            <ul>
-                <li>
-                    <a href="{% url 'webtools:webtools-sha-functions' %}">SHA converter</a>
+<main class="container main-context-6">
+    <div class="row">
+        <!-- <article class="col-md-5 m-5"> -->
+        <article class="col-4 m-5">
+            <h1 class="display-5">Web Tools</h1>
+            <hr class="">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-action list-group-item-dark">
+                    <a class="" href="{% url 'webtools:webtools-sha-functions' %}">SHA Functions</a>
                 </li>
-                <li>
-                    <a href="{% url 'webtools:webtools-iplookup' %}">IP Lookup</a>
+                <li class="list-group-item list-group-item-action list-group-item-dark">
+                    <a class="" href="{% url 'webtools:webtools-iplookup' %}">IP Lookup</a>
                 </li>
             </ul>
-        </div>
-    </section>
+        </article>
+    </div>
 </main>
 
 {% endblock content %}

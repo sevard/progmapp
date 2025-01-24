@@ -1,16 +1,15 @@
+import os
+import json
+import requests
 from django.shortcuts import render
-from django.http import HttpResponse
 from django.shortcuts import render
 from dotenv import load_dotenv
-import requests
-import json
-import os
 
 
 load_dotenv()
 
-def index(request):
-    return render(request, 'webtools/index.html')
+# def index(request):
+#     return render(request, 'webtools/index.html')
 
 
 def sha_functions(request):
@@ -27,8 +26,7 @@ def iplookup(request):
     if not IP:
         IP = os.getenv("LOCAL_IP")
 
-    request_url = f"{IP_LOOKUP_URL}/{IP}?access_key={ACCESS_KEY}"
-    resp = requests.get(request_url)
-    ctx = json.loads(resp.content)
-    response = render(request, 'webtools/iplookup.html', {'ctx': ctx})
-    return response
+    url = f"{IP_LOOKUP_URL}/{IP}?access_key={ACCESS_KEY}"
+    response = requests.get(url)
+    context = json.loads(response.content)
+    return render(request, 'webtools/iplookup.html', {'ctx': context})

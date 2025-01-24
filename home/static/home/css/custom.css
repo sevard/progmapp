@@ -24,6 +24,19 @@ footer {
     text-align: center;
 }
 
+/* <uniquifier>: Use a unique and descriptive class name */
+/*  <weight>: Use a value from 300 to 700 */
+/*  <width>: Use a value from 75 to 125 */
+
+.fredoka-weight-400 {
+  font-family: "Fredoka", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
 .header {
   display: flex;
   flex-direction: row;
@@ -68,6 +81,11 @@ footer {
   color: #202c21;
   font-weight: 700;
 }
+
+.main-context-6 {
+  margin-top: 5rem;
+}
+
 /*
 .bg-steel {
   background-color: #5f788a;

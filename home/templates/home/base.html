@@ -52,9 +52,22 @@
           <li class="nav-item">
               <a class="nav-link" href="{% url 'home:certs' %}">Certifications</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'webtools:webtools' %}">Webtools</a>
-          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Web Tools
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="{% url 'webtools:webtools-iplookup' %}">IP Lookup</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="{% url 'webtools:webtools-sha-functions' %}">SHA Functions</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <!-- <li><a class="dropdown-item" href="{ url 'webtools:webtools' }"> TODO </a></li> -->
+            </ul>
+        </li>
+
         </ul>
       </div>
 
