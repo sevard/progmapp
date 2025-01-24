@@ -24,9 +24,17 @@ footer {
     text-align: center;
 }
 
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+  padding: .7rem 3rem;
+}
+
 .my-photo {
-  width: 90%;
-  filter: grayscale(55%);
+  width: 100%;
+  filter: grayscale(70%);
   box-shadow: 5px 4px 15px -2px rgba(0,0,0,0.55);
   -webkit-box-shadow: 5px 4px 15px -2px rgba(0,0,0,0.55);
   -moz-box-shadow: 5px 4px 15px -2px rgba(0,0,0,0.55);
@@ -39,7 +47,6 @@ footer {
 
 /* p tag with my name */
 .top-name {
-  padding: 0.5em 0;
   font-size: calc(1.3rem + 0.3vw);
 }
 
@@ -54,8 +61,12 @@ footer {
 }
 
 .social-links a {
-  font-size: large;
-  color: #333333;
+  font-size: 1.2rem;
+  color: #2e2e2e;
+}
+.social-links:hover {
+  color: #202c21;
+  font-weight: 700;
 }
 /*
 .bg-steel {

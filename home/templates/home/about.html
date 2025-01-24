@@ -2,88 +2,75 @@
 
 {% load static %}
 
-{% block title %} <title>Portfolio Home</title> {% endblock title %}
+{% block title %} <title>Sergey Vardanyan</title> {% endblock title %}
 
 {% block content %}
 
-<main class="container">
+<main class="container mt-5">
+    <section class="row align-items-center pt-5">
+        <div class="p-3 mb-4 bg-body-tertiary rounded-3">
+            <div class="container-fluid">
+                <article class="row align-items-center mt-3">
+                    <div class="col-md-8 mb-3">
+                        <h1 class="display-3">Hi! It's me,</h1>
+                        <h2 class="display-4">Sergey Vardanyan</h2>
+                        <p class="fs-1 mt-2">I am a Software Developer </p>
+                    </div>
 
-    <div class="row">
-        <p class="col top-name">Sergey Vardanyan</p>
-    </div>
+                    <div class="col-md-4 mb-3">
+                        <img class="my-photo rounded-3" src="{% static '/home/images/me1.jpg' %}"
+                            alt="sergey vardanyan">
+                        <div class="social-links mt-5">
+                            <a href="https://www.linkedin.com/in/sergey-vardanyan-724811229/" rel="nofollow"
+                                target="_blank">LinkedIn</a> /
+                            <a href="https://github.com/sevard" rel="nofollow" target="_blank">GitHub</a> /
+                        </div>
+                    </div>
+                </article><!--row-->
+            </div><!--container-->
+        </div><!--jumbotron-->
+    </section>
 
     <section class="row align-items-center">
-        <article class="col-7">
-            <h1>Hi! It's me, Sergey Vardanyan.</h1>
-            <p class="top-name">I am a Software developer</p>
+        <div class="p-3 mb-4 bg-body-tertiary rounded-3">
+        <!-- <div class="p-3"> -->
+            <div class="container-fluid">
+                <div class="row">
+                    <article class="col-md-7 mb-5">
+                        <h1 class="display-5">Experience</h1>
+                        <hr class="my-4">
+                        <p class="fs-3 mt-2"> 
+                            I am proficient in working with a number of technologies.
+                            Over the years, I've honed my skills to deliver top-notch solutions
+                            that meet the highest standards of quality and efficiency. While crafting web applications, I thrive on
+                            challenges and I am committed to delivering excellence in every project I undertake.
 
-            <button type="button" class="btn btn-dark btn-lg">
-                <span>Send message</span>
-            </button>
-        </article>
-
-        <div class="col-5">
-            <img class="my-photo" src="{% static '/home/images/me1.jpg' %}" alt="sergey vardanyan">
-        </div>
+                            I created this website to showcase my projects in one convenient location and to 
+                            highlight my skills. In addition, I will post some usefull information to people who are 
+                            interested in web-development and testing.  I'm passionate about software development, 
+                            and I'm truly amazed by how the internet connects people worldwide. We sometimes take it for granted, 
+                            what was engineered over the years by thousands of great minds. Knowing that there's a rich history 
+                            behind it, and it took the collective effort of countless engineers to make it as seamless as it is today keeps me motivated, keeps me involved.
+                        </p>
+                    </article>
+                    <article class="col-md-5 mb-5">
+                        <h1 class="display-5">Skills</h1>
+                        <hr class="my-4">
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-action list-group-item-light">Python</li>
+                            <li class="list-group-item list-group-item-action list-group-item-light">Django / Flask</li>
+                            <li class="list-group-item list-group-item-action list-group-item-light">JavaScript / TypeScript / React</li>
+                            <li class="list-group-item list-group-item-action list-group-item-light">HTML / CSS</li>
+                            <li class="list-group-item list-group-item-action list-group-item-light">Java / SpringBoot</li>
+                            <li class="list-group-item list-group-item-action list-group-item-light">SQL / MongoDB</li>
+                            <li class="list-group-item list-group-item-action list-group-item-light">Linux / Shell Script</li>
+                            <li class="list-group-item list-group-item-action list-group-item-light">Git / GitHub</li>
+                        </ul>
+                    </article>
+                </div><!--row-->
+            </div><!--container-->
+        </div><!--jumbotron-->
     </section>
-
-    <br>
-    <br>
-    <br>
-
-    <div class="row">
-        <p class="col social-links">
-            <a href="https://www.linkedin.com/in/sergey-vardanyan-724811229/" rel="nofollow" target="_blank">LinkedIn</a> / 
-            <a href="https://github.com/sevard" rel="nofollow" target="_blank">GitHub</a> / 
-        </p>
-    </div>
-
-    <br>
-    <br>
-    <br>
-
-    <section class="row">
-        <article class="col-7 intro">
-            <h2>— Experience</h2>
-            <hr>
-            <p>
-                I am proficient in working with a number of technologies.  
-                Over the years, I've honed my skills to deliver top-notch solutions 
-                that meet the highest standards of quality and efficiency.
-                While crafting web applications, I thrive on challenges 
-                and I am committed to delivering excellence in every project I undertake.
-            </p>
-        </article>
-        <article class="col-5 intro">
-            <h2>— Skills</h2>
-            <hr>
-            <div class="row row-cols-2">
-                <ul class="col">
-                    <li>Python</li>
-                    <li>Java</li>
-                    <li>SQL</li>
-                    <li>Shell Script</li>
-                    <li>JavaScript</li>
-                    <li>React</li>
-                    <li>HTML/CSS</li>
-                </ul>
-                <ul class="col">
-                    <li>Django</li>
-                    <li>Flask</li>
-                    <li>FastAPI</li>
-                    <li>SpringBoot</li>
-                    <li>Linux</li>
-                    <li>Git</li>
-                    <li>GitHub</li>
-                </ul>
-            </div>
-        </article>
-    </section>
-
-    <br>
-    <br>
-    <br>
-
 </main>
 
 {% endblock content %}
