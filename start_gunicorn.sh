@@ -1,13 +1,19 @@
 #!/usr/bin/env bash
 
 set -x
-GUNICORN_CONFIG_FILE=utils/gunicorn_prod_config.py
-PIDFILE=/var/run/gunicorn/prod.pid
+
+GUNICORN_CONFIG_FILE=${HOME}/local/progmapp/utils/gunicorn_prod_config.py
+PIDFILE=${HOME}/local/logs/gunicorn_pid
+
 #GUNICORN_CONFIG_FILE=utils/gunicorn_dev_config.py
 #PIDFILE=/var/run/gunicorn/dev.pid
 
-# test gunicorn config
-/usr/bin/gunicorn --check-config -c $GUNICORN_CONFIG_FILE
+# Activate virtual environment
+source $HOME/local/progmapp/venv/bin/activate
+
+# Test gunicorn config
+#/usr/bin/gunicorn --check-config -c $GUNICORN_CONFIG_FILE
+gunicorn --check-config -c $GUNICORN_CONFIG_FILE
 rc=$?
 if [ $rc -ne 0 ]; then
     echo "gunicorn config file test failed.."
@@ -22,10 +28,10 @@ if test -s $PIDFILE; then
 fi
 
 #DEBUG
-#exit 0
+##exit 0
 
 # start gunicorn and wait PID file
-/usr/bin/gunicorn -c $GUNICORN_CONFIG_FILE
+gunicorn -c $GUNICORN_CONFIG_FILE
 rc=$?
 if [ $rc -ne 0 ]; then
     echo "Failed to start gunicorn server.."
